@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodShare - Checkout</title>
+
+    <!-- Fonts, Bootstrap, CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mansalva&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="../images:/logo.png" alt="FoodShare" height="50">
+                <span class="global-kitchen">Global Kitchen</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="browse.html">Browse</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="checkout.html">
+                            🛒 Cart
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-green">3</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-4">
+        <!-- Back button + Header -->
+        <div class="d-flex align-items-center gap-3 mb-4">
+            <a href="browse.html" class="btn btn-outline rounded-circle p-2" style="width: 40px; height: 40px;">
+                ←
+            </a>
+            <h1 class="mb-0">Checkout</h1>
+        </div>
+
+        <!-- Basket title -->
+        <div class="mb-4">
+            <div class="d-flex align-items-center gap-3">
+                <h2 class="mb-0">Basket</h2>
+                <span class="text-muted" style="font-size: 1rem;">|  3 items</span>
+            </div>
+            <hr style="border-top: 2px solid var(--green); width: 100%; margin-top: 8px;">
+        </div>
+
+        <!-- TWO COLUMNs: Items on left, Order Summary on right -->
+        <div class="row g-4">
+         <!-- LEFT COLUMN: Food Items with Images -->
+        <div class="col-lg-7">
+            <div class="bg-white rounded-3 p-3">
+            <!-- Item 1 -->
+            <div class="d-flex align-items-center py-3 border-bottom">
+                <!-- Image -->
+                <div style="width: 80px; height: 80px; flex-shrink: 0;">
+                    <img src="https://media.hellofresh.com/q_100,w_3840,f_auto,c_limit,fl_lossy/recipes/image/c508aed7-e4d6-4d38-aa21-e829a72f764f-832d52fd.jpg" alt="Cajun Shrimp" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+            </div>
+            <!-- Info -->
+            <div style="flex: 2; margin-left: 15px;">
+                <h5 class="fw-bold mb-1">Cajun Shrimp Cavatappi</h5>
+                <p class="text-muted small mb-0" style = "font-family: 'Mansalva', cursive;">Creamy Cajun Pasta with Blackened Shrimp</p>
+            </div>
+            <div style="flex: 0.8;" class="text-center">
+                <span class="fw-bold">$12.99</span>
+            </div>
+            <div style="flex: 0.8;" class="text-center">
+                <span>Qty: 1</span>
+            </div>
+            <div style="flex: 1;" class="text-end">
+                <button class="btn btn-sm btn-outline-danger me-1">🗑️</button>
+                <button class="btn btn-sm btn-outline-secondary">✏️</button>
+            </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="d-flex align-items-center py-3 border-bottom">
+            <div style="width: 80px; height: 80px; flex-shrink: 0;">
+                <img src="https://media.hellofresh.com/q_100,w_3840,f_auto,c_limit,fl_lossy/recipes/image/78469481-9fc9-4c25-ae37-cb3bc44bcf8f-c5868b17.jpg" alt="Beef Pot Roast" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+            </div>
+            <div style="flex: 2; margin-left: 15px;">
+                <h5 class="fw-bold mb-1">Braised Beef Pot Roast</h5>
+                <p class="text-muted small mb-0" style = "font-family: 'Mansalva', cursive;">With Mashed Potatoes & Gravy</p>
+            </div>
+            <div style="flex: 0.8;" class="text-center">
+                <span class="fw-bold">$14.99</span>
+            </div>
+            <div style="flex: 0.8;" class="text-center">
+                <span>Qty: 1</span>
+            </div>
+            <div style="flex: 1;" class="text-end">
+                <button class="btn btn-sm btn-outline-danger me-1">🗑️</button>
+                <button class="btn btn-sm btn-outline-secondary">✏️</button>
+            </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="d-flex align-items-center py-3">
+            <div style="width: 80px; height: 80px; flex-shrink: 0;">
+                <img src="https://img.hellofresh.com/hellofresh_s3/image/659f93da1ee0609964a9bb6f-d59fe866.jpeg" alt="Quesadillas" style="width: 100%; height: 100%; object-fit: cover; border-radius: 9px;">
+            </div>
+            <div style="flex: 2; margin-left: 15px;">
+                <h5 class="fw-bold mb-1">Cheesy Pork Quesadillas</h5>
+                <p class="text-muted small mb-0" style = "font-family: 'Mansalva', cursive;">With Salsa & Sour Cream</p>
+            </div>
+            <div style="flex: 0.8;" class="text-center">
+                <span class="fw-bold">$10.99</span>
+            </div>
+            <div style="flex: 0.8;" class="text-center">
+                <span>Qty: 1</span>
+            </div>
+            <div style="flex: 1;" class="text-end">
+                <button class="btn btn-sm btn-outline-danger me-1">🗑️</button>
+                <button class="btn btn-sm btn-outline-secondary">✏️</button>
+            </div>
+        </div>
+    </div>
+              <!-- THANK YOU  -->
+        <div class="d-flex align-items-center justify-content-center gap-2 p-3" style="border-top: 1px solid var(--green);">
+            <img src="../images:/logo.png" alt="FoodShare" height="100" style="opacity: 1;">
+            <p class="food-title mt-2" style="font-family: 'Mansalva', cursive; font-size: 3.5rem; color: var(--green);">
+                Thank You For Shopping!
+            </p>
+        </div>
+
+</div>
+
+            <!-- RIGHT COLUMN: Order Summary + Payment Form -->
+            <div class="col-lg-5">
+                <div class="bg-white rounded-3 p-4">
+                    <h3 class="mb-4">Order Summary</h3>
+                    
+                    <!-- Totals -->
+                    <div class="mb-3 d-flex justify-content-between">
+                        <span>Subtotal</span>
+                        <span>$38.97</span>
+                    </div>
+                    <div class="mb-3 d-flex justify-content-between">
+                        <span>Tax (13%)</span>
+                        <span>$5.07</span>
+                    </div>
+                    <hr>
+                    <div class="mb-4 d-flex justify-content-between fw-bold">
+                        <span>Total</span>
+                        <span>$44.04</span>
+                    </div>
+
+                    <!-- Pickup Details -->
+                    <h5 class="mb-3">Pickup Details</h5>
+                    <div class="mb-3">
+                        <label class="form-label">Pickup Time</label>
+                        <select class="form-select">
+                            <option>Today, 5:00 PM - 7:00 PM</option>
+                            <option>Today, 7:00 PM - 9:00 PM</option>
+                            <option>Tomorrow, 11:00 AM - 2:00 PM</option>
+                        </select>
+                    </div>
+
+                    <!-- Payment Type -->
+                    <h5 class="mb-3">Payment Type</h5>
+                    <div class="mb-3">
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="radio" name="payment" id="creditCard" checked>
+                            <label class="form-check-label" for="creditCard">Credit Card</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="payment" id="coupon">
+                            <label class="form-check-label" for="coupon">Coupon / Voucher</label>
+                        </div>
+                    </div>
+
+                    <!-- Coupon Field -->
+                    <div class="mb-4">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Enter coupon code">
+                            <button class="btn btn-outline-primary" type="button">Apply</button>
+                        </div>
+                    </div>
+
+                    <!-- Proceed Button -->
+                    <button class="btn btn-primary w-100 py-3 fw-bold">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>FoodShare</h5>
+                    <p>Global Kitchen<br>Toronto, ON</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="browse.html" class="footer-link">Browse</a></li>
+                        <li><a href="login.html" class="footer-link">Login</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>info@GlobalKitchen.ca<br>416-555-0123</p>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <p class="text-center mb-0">&copy; 2026 Global Kitchen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
